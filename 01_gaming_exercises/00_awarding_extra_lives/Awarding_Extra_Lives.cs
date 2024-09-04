@@ -10,7 +10,7 @@ class Template {
         {
             lives -= 1;
         }
-        else if (score > 10000 && score < 100000)
+        else if (score < 100000)
         {
             lives += 1;
         }
