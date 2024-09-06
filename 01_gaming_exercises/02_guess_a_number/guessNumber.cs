@@ -21,8 +21,11 @@ class Template {
             Console.WriteLine("Please insert a integer between 0 and 100 as a guess\n");
             guess = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine(guess);
+
+            //+1 to number of guesses made
             numGuesses++;
             //Compare guess to random number.
+            //If match, print win, if greater or less, give hint
             if(guess < secretNum)
             {
                 Console.WriteLine("Your guess is too low\n");
@@ -37,26 +40,13 @@ class Template {
                 break;
             }
             
+            //Check if the number of guesses made exceeds the max guesses
             if(numGuesses >= maxGuesses)
             {
                 Console.WriteLine("You Lose. \nYou are a failure.");
             }
-            //If match, print win, if greater or less, give hint
-
-
-            //+1 to number of guesses made
-
-
-            //Check if the number of guesses made exceeds the max guesses
-
 
             //If max guesses exceeded, print lose game message, if not, allow for another guess
         }
-
-
-
-
-
-
     }
 }
