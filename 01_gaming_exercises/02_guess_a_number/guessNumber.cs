@@ -34,7 +34,7 @@ class Template {
             {
                 Console.WriteLine("Your guess is too high\n");
             }
-            else
+            else 
             {
                 Console.WriteLine("Congradulations! Your guess is correct!\n");
                 break;
