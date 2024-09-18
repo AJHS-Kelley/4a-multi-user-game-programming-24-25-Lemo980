@@ -14,10 +14,14 @@ class Template {
     Console.WriteLine("Welcome to rock paper scissors " + userName + "!\n");
     Console.WriteLine("In this game two players (you and the CPU) choose rock, paper, or scissors.\nRock beats scissors, scissors beats paper, paper beats rock, and each round win will give you one point.\nFirst to 5 points wins the game!");
 
+while(playerPts < 5 & compPts < 5)
+{
+    while(userChoice != "rock" & userChoice != "paper" & userChoice != "scissors")
+    {
     Console.WriteLine("Input rock, paper, or scissors");
     userChoice = Console.ReadLine().ToLower();
     //Console.WriteLine(userChoice);
-
+    }
 
     Random rnd = new Random();
     int Rand123 = rnd.Next(1, 4);
@@ -88,40 +92,17 @@ class Template {
             compPts += 1;
         }
     }
+        userChoice = "";
+}
+    Console.WriteLine("Game over.");
+    if(compPts == 5)
+{
+    Console.WriteLine("The computer has bested you. \nYou are a loser.");
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if(playerPts == 5)
+{
+    Console.WriteLine("You have bested the computer! \nYou are a winner!");
+}
     }
 }
