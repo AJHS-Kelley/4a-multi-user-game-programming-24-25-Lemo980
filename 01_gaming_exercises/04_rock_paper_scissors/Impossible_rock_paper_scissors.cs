@@ -20,6 +20,7 @@ class Template {
     Console.WriteLine("\n\n\n\nWould you like to lose?\n\n If so, type yes.\n If not, type no");
     botActive = Console.ReadLine().ToLower();
     }
+
 while(playerPts < 5 & compPts < 5)
 {
     while(userChoice != "rock" & userChoice != "paper" & userChoice != "scissors")
@@ -50,7 +51,6 @@ while(playerPts < 5 & compPts < 5)
     Random rnd = new Random();
     int Rand123 = rnd.Next(1, 4);
     //Console.WriteLine(Rand123);
-
     if(Rand123 == 1)
     {
         CPUchoice = "rock";
@@ -64,8 +64,9 @@ while(playerPts < 5 & compPts < 5)
         CPUchoice = "scissors";
     }
     
-    Console.WriteLine(CPUchoice);
-    Console.WriteLine(userChoice);
+    //Console.WriteLine(CPUchoice);
+    //Console.WriteLine(userChoice);
+    
     }
     //If there is a draw
     if(CPUchoice == userChoice)
