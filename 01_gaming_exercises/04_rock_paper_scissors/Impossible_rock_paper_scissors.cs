@@ -8,12 +8,18 @@ class Template {
     string userName = "Test player";
     int playerPts = 0;
     int compPts = 0;
-
+    string botActive = "";
     Console.WriteLine("To start, input your name and press ENTER.");
     userName = Console.ReadLine();
     Console.WriteLine("Welcome to rock paper scissors " + userName + "!\n");
     Console.WriteLine("In this game two players (you and the CPU) choose rock, paper, or scissors.\nRock beats scissors, scissors beats paper, paper beats rock, and each round win will give you one point.\nFirst to 5 points wins the game!");
 
+    //Choose if you want impossible bot
+    while(botActive != "yes" & botActive != "no")
+    {
+    Console.WriteLine("\n\n\n\nWould you like to lose?\n\n If so, type yes.\n If not, type no");
+    botActive = Console.ReadLine().ToLower();
+    }
 while(playerPts < 5 & compPts < 5)
 {
     while(userChoice != "rock" & userChoice != "paper" & userChoice != "scissors")
@@ -23,6 +29,24 @@ while(playerPts < 5 & compPts < 5)
     //Console.WriteLine(userChoice);
     }
 
+    if(botActive == "yes")
+    {
+    if(userChoice == "rock")
+    {
+        CPUchoice = "paper";
+    }
+    else if(userChoice == "paper")
+    {
+        CPUchoice = "scissors";
+    }
+    else if(userChoice == "scissors")
+    {
+        CPUchoice = "rock";
+    }
+    }
+
+    if(botActive == "no")
+    {
     Random rnd = new Random();
     int Rand123 = rnd.Next(1, 4);
     //Console.WriteLine(Rand123);
@@ -39,8 +63,10 @@ while(playerPts < 5 & compPts < 5)
     {
         CPUchoice = "scissors";
     }
-    //Console.WriteLine(CPUchoice);
-
+    
+    Console.WriteLine(CPUchoice);
+    Console.WriteLine(userChoice);
+    }
     //If there is a draw
     if(CPUchoice == userChoice)
     {
