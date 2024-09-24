@@ -17,7 +17,7 @@ class Template {
     //Choose if you want impossible bot
     while(botActive != "yes" & botActive != "no")
     {
-    Console.WriteLine("\n\n\n\nWould you like to lose?\n\n If so, type yes.\n If not, type no");
+    Console.WriteLine("\n\n\n\nWould you like to be forced to lose?\n\n If so, type yes.\n If not, type no");
     botActive = Console.ReadLine().ToLower();
     }
 
