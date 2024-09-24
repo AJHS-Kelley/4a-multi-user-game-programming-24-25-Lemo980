@@ -14,9 +14,9 @@ class Template {
     Console.WriteLine("Welcome to rock paper scissors " + userName + "!\n");
     Console.WriteLine("In this game two players (you and the CPU) choose rock, paper, or scissors.\nRock beats scissors, scissors beats paper, paper beats rock, and each round win will give you one point.\nFirst to 5 points wins the game!");
 
-while(playerPts < 5 & compPts < 5)
+while(playerPts < 5 && compPts < 5)
 {
-    while(userChoice != "rock" & userChoice != "paper" & userChoice != "scissors")
+    while(userChoice != "rock" && userChoice != "paper" && userChoice != "scissors")
     {
     Console.WriteLine("Input rock, paper, or scissors");
     userChoice = Console.ReadLine().ToLower();
@@ -46,9 +46,8 @@ while(playerPts < 5 & compPts < 5)
     {
         Console.WriteLine("Draw. No points have been awarded \n");
     }
-
     //Checks for what the CPU chose then compares it to user choice and adds points accordingly
-    if(CPUchoice == "rock")
+    else if(CPUchoice == "rock")
     {
         if(userChoice == "paper")
         {
@@ -56,7 +55,7 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        if(userChoice == "scissors")
+        else
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
@@ -71,7 +70,7 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        if(userChoice == "rock")
+        else
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
@@ -86,7 +85,7 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        if(userChoice == "paper")
+        else
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;

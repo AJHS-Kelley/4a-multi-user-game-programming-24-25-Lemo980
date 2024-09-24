@@ -15,15 +15,15 @@ class Template {
     Console.WriteLine("In this game two players (you and the CPU) choose rock, paper, or scissors.\nRock beats scissors, scissors beats paper, paper beats rock, and each round win will give you one point.\nFirst to 5 points wins the game!");
 
     //Choose if you want impossible bot
-    while(botActive != "yes" & botActive != "no")
+    while(botActive != "yes" && botActive != "no")
     {
     Console.WriteLine("\n\n\n\nWould you like to be forced to lose?\n\n If so, type yes.\n If not, type no");
     botActive = Console.ReadLine().ToLower();
     }
 
-while(playerPts < 5 & compPts < 5)
+while(playerPts < 5 && compPts < 5)
 {
-    while(userChoice != "rock" & userChoice != "paper" & userChoice != "scissors")
+    while(userChoice != "rock" && userChoice != "paper" && userChoice != "scissors")
     {
     Console.WriteLine("Input rock, paper, or scissors");
     userChoice = Console.ReadLine().ToLower();
@@ -83,7 +83,7 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        else()
+        else
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
@@ -98,14 +98,14 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        else()
+        else
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
         }
     }
 
-    else()
+    else
     {
         if(userChoice == "rock")
         {
@@ -113,7 +113,7 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        else()
+        else
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
