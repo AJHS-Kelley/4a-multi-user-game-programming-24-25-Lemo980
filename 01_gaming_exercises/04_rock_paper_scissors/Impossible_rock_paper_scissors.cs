@@ -83,7 +83,7 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        if(userChoice == "scissors")
+        else()
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
@@ -98,14 +98,14 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        if(userChoice == "rock")
+        else()
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
         }
     }
 
-    else if(CPUchoice == "scissors")
+    else()
     {
         if(userChoice == "rock")
         {
@@ -113,7 +113,7 @@ while(playerPts < 5 & compPts < 5)
             playerPts += 1;
         }
 
-        if(userChoice == "paper")
+        else()
         {
             Console.WriteLine("You Lost! The Cpu gains a point\n");
             compPts += 1;
