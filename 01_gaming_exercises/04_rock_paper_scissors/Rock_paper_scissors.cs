@@ -1,3 +1,4 @@
+// CODE CHECKED, ALL GOOD! 
 using System;
 
 class Template {
@@ -27,11 +28,11 @@ while(playerPts < 5 && compPts < 5)
     int Rand123 = rnd.Next(1, 4);
     //Console.WriteLine(Rand123);
 
-    if(Rand123 == 1)
+    if (Rand123 == 1)
     {
         CPUchoice = "rock";
     }
-    else if(Rand123 == 2)
+    else if (Rand123 == 2)
     {
         CPUchoice = "paper";
     }
@@ -42,7 +43,7 @@ while(playerPts < 5 && compPts < 5)
     //Console.WriteLine(CPUchoice);
 
     //If there is a draw
-    if(CPUchoice == userChoice)
+    if (CPUchoice == userChoice)
     {
         Console.WriteLine("Draw. No points have been awarded \n");
     }
