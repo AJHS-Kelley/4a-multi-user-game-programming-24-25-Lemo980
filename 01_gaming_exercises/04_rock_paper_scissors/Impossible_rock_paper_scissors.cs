@@ -73,9 +73,8 @@ while(playerPts < 5 && compPts < 5)
     {
         Console.WriteLine("Draw. No points have been awarded \n");
     }
-
     //Checks for what the CPU chose then compares it to user choice and adds points accordingly
-    if(CPUchoice == "rock")
+    else if(CPUchoice == "rock")
     {
         if(userChoice == "paper")
         {
@@ -127,8 +126,7 @@ while(playerPts < 5 && compPts < 5)
 {
     Console.WriteLine("The computer has bested you. \nYou are a loser.");
 }
-
-    if(playerPts == 5)
+    else
 {
     Console.WriteLine("You have bested the computer! \nYou are a winner!");
 }
