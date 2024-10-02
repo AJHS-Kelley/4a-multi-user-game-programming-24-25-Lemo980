@@ -18,12 +18,11 @@ class RPS {
     Console.WriteLine("How many loops would you like? Please input an integer then press ENTER.\n ");
     loopReqs = Convert.ToInt32(Console.ReadLine());
 
-
+    Random rnd = new Random();
 while(loopCount < loopReqs)
 {
-    Random rnd = new Random();
-    int CPUrand = rnd.Next(1, 3);
-    int playerRand = rnd.Next(1,3);
+    int CPUrand = rnd.Next(1, 4);
+    int playerRand = rnd.Next(1, 4);
     //Console.WriteLine(CPUrand);
 
     if (CPUrand == 1)
@@ -52,9 +51,12 @@ while(loopCount < loopReqs)
         userChoice = "scissors";
     }
     //Console.WriteLine(CPUchoice);
-
+    if (CPUchoice == userChoice)
+    {
+        numDraws++;
+    }
     //Checks for what the CPU chose then compares it to user choice and adds points accordingly
-    if(CPUchoice == "rock")
+    else if(CPUchoice == "rock")
     {
         if(userChoice == "paper")
         {
