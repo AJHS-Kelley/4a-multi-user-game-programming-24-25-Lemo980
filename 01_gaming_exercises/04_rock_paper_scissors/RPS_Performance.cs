@@ -53,13 +53,8 @@ while(loopCount < loopReqs)
     }
     //Console.WriteLine(CPUchoice);
 
-    //If there is a draw
-    if (CPUchoice == userChoice)
-    {
-        numDraws++;
-    }
     //Checks for what the CPU chose then compares it to user choice and adds points accordingly
-    else if(CPUchoice == "rock")
+    if(CPUchoice == "rock")
     {
         if(userChoice == "paper")
         {
@@ -67,7 +62,7 @@ while(loopCount < loopReqs)
 
         }
 
-        else
+        else if(userChoice == "scissors")
         {
             compPts = compPts + 1;
         }
@@ -80,7 +75,7 @@ while(loopCount < loopReqs)
             playerPts = playerPts + 1;
         }
 
-        else
+        else if(userChoice == "rock")
         {
             compPts = compPts + 1;
         }
@@ -93,13 +88,19 @@ while(loopCount < loopReqs)
             playerPts = playerPts + 1;
         }
 
-        else
+        else if(userChoice == "paper")
         {
             compPts = compPts + 1;
         }
     }
-        userChoice = "";
 
+    //If there is a draw
+    if (CPUchoice == userChoice)
+    {
+        numDraws++;
+    }
+
+    userChoice = "";
     loopCount++;
 }
     Console.WriteLine($"Player score: {playerPts}");
