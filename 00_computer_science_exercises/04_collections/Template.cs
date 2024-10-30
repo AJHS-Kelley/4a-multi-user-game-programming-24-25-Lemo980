@@ -19,8 +19,8 @@ class 04_Collections {
 
         //DECLARING AND DEFINING AN ARRAY
         string[] breakfastFoods = {Eggs, Waffle, Pancake, Bacon, Hashbrowns};
-        int[] testScores = {89, 12, 32, 99, 100}
-        double[] GPA = {0.01D, 2.6D, 3.5D, 3.0D, 4.0D} 
+        int[] testScores = {89, 12, 32, 99, 100};
+        double[] GPA = {0.01D, 2.6D, 3.5D, 3.0D, 4.0D};
 
 
 
