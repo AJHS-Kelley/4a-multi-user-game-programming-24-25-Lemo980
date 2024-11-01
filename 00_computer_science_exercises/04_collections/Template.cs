@@ -1,4 +1,4 @@
-//Collections Example, Eliot Blanton, v0.1
+//Collections Example, Eliot Blanton, v2.0
 using System;
 using System.Linq;
 using System.Collections;
@@ -21,12 +21,12 @@ class Collections {
         string[] breakfastFoods = {"Eggs", " Waffle", " Pancake", " Bacon", " Hashbrowns"};
         int[] testScores = {89, 12, 32, 99, 100};
         double[] GPAs = {0.01D, 2.6D, 3.5D, 3.0D, 4.0D};
-
+/* ------------------------------------------------------------------
         //Print Array Contents -- All elements on a single line
         Console.WriteLine("The elements of each array are:\n");
         Console.WriteLine("breakfastFoods: \n" + String.Join(",", breakfastFoods));
         Console.WriteLine(); // print an empty line to the screen
-/* ------------------------------------------------------------------
+
         //print array elements on seperate lines
         Console.WriteLine("testScores: \n" + String.Join("\n", testScores));
         Console.WriteLine(); // print an empty line to the screen
@@ -60,8 +60,28 @@ class Collections {
         Console.WriteLine();
 --------------------------------------------------------------------------*/
 
-        
 
+        //Common Errors with arrays
+        //Console.WriteLine(breakfastFoods[99]);  //Index out of bounds -- Accessing index that does not exist in the array
+        //testScores[0] = "99"; // Cannot implicitly change (insert datatype) to (insert different datatype) -- Attempting to put a element of one datatype into an array containing elements of a different datatype
 
+        //Common array methods -- Ways to work with array data
+        //sorting an array
+        int[] intArr = {66, 1, 85, 234, 7789, 232, 67684, 12, 8, -33001};
+        string[] zooAnimals = {"orangutan", "leemur", "iguana", "leopard", "rat", "tapir", "frog", "eagle", "crow", "isopod"};
+
+        Console.WriteLine("The integer array is: \n" + String.Join(", ", intArr));
+        Console.WriteLine("The zooAnimals array is: \n" + String.Join(", ", zooAnimals));
+
+        Array.Sort(intArr);
+        Array.Sort(zooAnimals);
+
+        Console.WriteLine("The integer array is: \n" + String.Join(", ", intArr));
+        Console.WriteLine("The zooAnimals array is: \n" + String.Join(", ", zooAnimals));
+
+        //Finding the MIN, MAX, and SUM of numerical arrays
+        Console.WriteLine("The MINIMUM value for intArr is: " + intArr.Min());
+        Console.WriteLine("The MAXIMUM value for intArr is: " + intArr.Max());
+        Console.WriteLine("The SUM value for intArr is: " + intArr.Sum());
     }//DO NOT DELETE, 3 SPACES INDENTED
 }//DO NOT DELETE
